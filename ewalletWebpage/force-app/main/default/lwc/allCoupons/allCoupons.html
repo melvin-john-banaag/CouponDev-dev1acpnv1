@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Coupon Items">
+        <template if:true={Coupon_Item__c.data}>
+            <lightning-datatable
+                key-field="Id"
+                data={Coupon_Item__c.data}
+                columns={columns}>
+                <template if:true={errors}>
+                    <p>{errors}</p>
+                </template>
+           </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>
